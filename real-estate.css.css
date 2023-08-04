@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+}
+body{
+    height: 200vh;
+}
+.container{
+    background-color:pink;
+    color: pink;
+}
+.navbar{
+    background-color:black;
+    height: 60px;
+    color: white;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 0 50px;
+    position: sticky;
+    top: 0;
+    
+}
+.logo{
+    color:white;
+    font-size: 35px;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+    padding: 0;
+    font-size: 20px;
+}
+.menu-list-item{
+    cursor: pointer;
+}
+.menu-list-item:hover{
+    font-weight: bold;
+}
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: -38px;
+    margin-bottom: -30px;
+    column-gap: 30px;
+
+}
+profile-text-container{
+    display: flex;
+    align-items: center;
+      column-gap: 5px;
+}
+
+.toggle{
+    color: goldenrod;
+    width: 40px;
+    background-color: white;
+    height: 20px;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+    transition: .3s ease all
+}
+
+.sidebar{
+    background-color:black;
+  color: white;
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    row-gap: 40px;
+     position: fixed;
+     top: 0px;
+}
+.sidebar i{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.container{
+    background-color: black;
+}
+.content-wrapper{
+margin-left: 50px;
+}
+.featured-contend{
+    background: url("resim/RESİMLER/hero-img_copy.jpg");
+  padding: 50px;
+  height: calc(100vh - 160px);
+  background-size: 100% 100%;
+  color: darkblue;
+}
+.featured-title{
+    
+    
+}
+.featured-desc{
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    margin: 20px 0;
+}
+.featured-buttons{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.featured-buttons button{
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    column-gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.featured-buttons .info-button{
+    background-color: rgb(145, 142, 142,0.7);
+    color: white;
+}
+.movie-list-filter{
+    margin: 20px 0 20px 50px;
+    padding: 20px;
+}
+.movie-list-filter select{
+    background-color:white;
+    color: black;
+    padding: 7px 0;
+    width: 125px;
+    border-radius: 5px;
+}
+.movie-list-container{
+    margin-left: 70px;
+    
+}
+.movie-list{
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+
+}
+.movie-list-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.movie-item{
+    position: relative;
+}
+.movie-item:hover .movie-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    transition: 0.7s;
+    opacity: .7;
+}
+.movie-list-wrapper
+.movie-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+}
+.movie-item-title{
+    background-color: rgb(40, 40, 40,0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    left: 50px;
+    top: 10%;
+}
+.movie-item-buttons{
+    background-color: rgb(40, 40, 40,0.4);
+    padding: 0 10px;
+    font-weight: bold;
+    position: absolute;
+    display: flex;
+    color: white;
+    left: 50px;
+    bottom: 10%;
+    column-gap: 20px;
+   
+  
+   
+}
+.movie-item-buttons i{
+   cursor: pointer;
+   opacity: .5;
+   font-size: 20px;
+   transition: 0.5s all ease;
+}
+.movie-item-buttons i:hover{
+  opacity: 1;
+ }
+ .arrow{
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    color: white;
+    opacity: .5;
+    transition: .5s ease all;
+    cursor: pointer;
+ }
+ .arrow:hover{
+opacity: 1;
+ }
+ .container.active{
+    background-color: white;
+ }
+ .navbar.active{
+background-color: white;
+color: black;
+ }
+ .sidebar.active{
+background-color: white
+;
+ }
+ .sidebar i.active{
+    color: black;
+ }
+.toggle.active{
+    background-color: black;
+}
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+
+}
+.movie-list-filter select.active{
+    background-color: black;
+    color: white;
+}
+
+
+@media only screen and(max-width: 820px){
+    .menu-container{
+        display: none;
+    }
+    .featured-contend{
+        height: 40vh;
+
+    }
+
+
+    .featured-title{
+        width: 200px;
+
+    }
+    .featured-desc{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 100px;
+        padding: 0;
+    }
+}
